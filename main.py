@@ -19,17 +19,19 @@ import random
 
 class Ball:
     def __init__(self):
-        self.image = load_image('ball41x41.png')
+        self.image = load_image('ball.png')
         # self.x, self.y = random.randint(100, 700), 90
-        
+
     def draw(self):
-        self.image.draw(100,100)
+        self.image.draw(400,300)
         pass
 
     def update(self):
         pass
     
-    pass
+   
+
+
 
 def reset_world():
     global running
@@ -42,7 +44,7 @@ def reset_world():
     
     ball = Ball()
     world.append(ball)
-    pass
+    
 
 def handle_event():
     global running
@@ -58,13 +60,12 @@ def handle_event():
 def update_world():
     for o in world:
         o.update()
-    pass
 
 def render_world():
     clear_canvas()
 
     for o in world:
-        o.update()
+        o.draw()
 
     update_canvas()
 
@@ -81,4 +82,8 @@ while running:
     render_world()
     delay(0.5)
 
+
+
 close_canvas()
+
+
