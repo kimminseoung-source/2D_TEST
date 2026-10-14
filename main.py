@@ -27,7 +27,7 @@ class Ball:
         pass
 
     def update(self):
-        self.y +=5
+        self.y += random.randint(5,30)
         pass
     
    
