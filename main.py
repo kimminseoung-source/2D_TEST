@@ -6,5 +6,16 @@
 # 클래스를 만들고, 객체들을 생성하는 방식
 
 # 커밋을 적절하게 할 것
-###
-##
+
+
+from pico2d import * 
+import random
+
+
+
+
+open_canvas()
+
+delay(0.5)
+
+close_canvas()
