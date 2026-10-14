@@ -27,8 +27,8 @@ class Ball:
         pass
 
     def update(self):
-        if(self.y<=550):
-            self.y += random.randint(20,30)
+        if(self.y<550):
+            self.y += random.randint(5,50)
             
         if(self.y >= 550):
             self.y -=50
@@ -90,7 +90,7 @@ while running:
     handle_event()
     update_world()
     render_world()
-    delay(0.5)
+    delay(0.05)
 
 
 
