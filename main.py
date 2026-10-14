@@ -27,7 +27,15 @@ class Ball:
         pass
 
     def update(self):
-        self.y += random.randint(5,30)
+        if(self.y<=550):
+            self.y += random.randint(20,30)
+            
+        if(self.y >= 550):
+            self.y -=50
+  
+
+       
+
         pass
     
    
