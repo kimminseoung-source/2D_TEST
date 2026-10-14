@@ -20,13 +20,14 @@ import random
 class Ball:
     def __init__(self):
         self.image = load_image('ball.png')
-        # self.x, self.y = random.randint(100, 700), 90
+        self.x, self.y = random.randint(100, 700), 0
 
     def draw(self):
-        self.image.draw(400,300)
+        self.image.clip_draw(0,0,41,41,self.x, self.y)
         pass
 
     def update(self):
+        self.y +=5
         pass
     
    
@@ -43,7 +44,8 @@ def reset_world():
     world = []
     
     ball = Ball()
-    world.append(ball)
+    balls = [Ball() for i in range (0,20)]
+    world+=balls
     
 
 def handle_event():
